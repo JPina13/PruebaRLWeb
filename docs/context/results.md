@@ -1,0 +1,54 @@
+# Results
+
+> Build log. 1-4 lines per finished item. List format. Older detail lives in `archive/`. Cap ~6k tokens.
+
+- [2026-04-16] Initial landing shipped (`81225c7`): semantic sections (Nav, Hero, Nosotros, Valores, Unidades, Servicios, Industrias, Propuesta, Clientes, Contacto, Footer), design tokens + responsive CSS, mouse-parallax hero, reveal-on-scroll, KPI counters. Verified desktop/tablet/mobile.
+- [2026-07-31] Context split (`57106f9`): platform/infra workstream (n8n, Coolify, Postgres) moved to `ProvexAI/Retorno-dashboard`. This repo is the static landing only.
+- [2026-07-31] Hero video rhythm reworked (`38f5927`): swap fires from `timeupdate` before a clip ends instead of on `ended` (which dissolved from a frozen last frame); added `hero-video-3/4.mp4`; next clip drawn from least-recently-shown so repeats space to ~26s (was 16s); fade 1.6s.
+- [2026-07-31] Hero payload cut: audio stripped from all 4 clips, clips 3-4 re-encoded (clip 3 16.2MB -> 2.6MB, visually identical at 1:1). Initial load 10.5MB -> 3.8MB despite doubling the clip count.
+- [2026-07-31] Immersive imagery layer: 5 Higgsfield stills (2 full-bleed bands, 2 section
+  backgrounds, 1 network panel in the Servicios sticky column) + GSAP ScrollTrigger parallax.
+  Fixed `body{overflow-x:hidden}` -> `clip`, which was silently freezing every scrub at
+  progress 0. Verified: parallax linear 0->1 on all 4 layers, worst-case edge margin 16px,
+  text contrast 17-19:1 over the backgrounds (WCAG AAA is 7:1), no console errors.
+  Payload +664KB total (548KB webp + 116KB GSAP) after a 60MB->548KB PNG->webp conversion.
+- [2026-07-31] Replaced the abstract topographic divider band with a cross-dock interior photo
+  (`crossdock.webp`): it sat less than a screen from the Servicios network panel, so two
+  abstract graphics competed, and it was the only dark slab between two cream sections.
+  Removed the now-dead `band--thin` / `band--graphic` CSS and the graphic scale tween.
+  Verified the new band matches the others: progress 0->0.5->1, translateY -72->72, margin 31px.
+- [2026-08-02] Band edges: each veil now ends on the exact background colour of the section
+  that follows (ink for Valores, cream for Servicios via `.band--exit-cream`) at alpha 1 —
+  the photo no longer stops on a hard seam. Fade held to the last 15% so it does not swallow
+  the aerial shot's truck at ~88% band height. Confirmed visually by Alan; visual-QA todo closed.
+- [2026-08-02] Repo transferred ProvexAI -> alanvaa06 (private, redirect intact), origin repointed.
+- [2026-08-02] First Vercel deploy: https://retorno-landing-five.vercel.app. Needed
+  `framework/buildCommand: null` + `outputDirectory: "."` (Vercel autodetected Next.js and
+  failed the build) and `.vercelignore` (a static deploy serves the whole repo, so
+  docs/context was publicly reachable). Verified: all assets 200 with correct MIME, cache and
+  security headers applied, docs/ + .claude/ + CLAUDE.md return 404.
+
+## 2026-08-08 — award-craft elevate (D + A + B + C), static stack
+- Awwwards anatomy checklist 3.2 -> 7.4/10 (self-scored, same checklist). Preloader, overlay menu, signature pinned circuit, interactive footer and grain all added; hero display type 6.7vw -> 11.6vw in Archivo (self-hosted).
+- Copy: hero rewritten to pass the descriptiveness test, scroll arc reordered to PAS, and 5 competing CTA labels collapsed to one ("Ver mi propuesta de retorno").
+- Perf: initial payload ~4.2MB -> 1.9MB, third-party requests 2 -> 0, infinite animations 7 -> 3, one pin on the page.
+- Fixed while building: 420px of horizontal scroll from a percentage-bearing CSS token and from a fixed grain overlay; the pinned stage running on mobile; overlay-menu focus stranded on <body>; footer fine print at 4.32:1; a black-screen hang if GSAP fails to load.
+- Not verified visually: screenshots were unavailable all session (Browser pane not compositing). All claims above are measured, not eyeballed.
+- Type dialled back after review (2026-08-08): the first pass read as shouting. Display steps cut 15-38% (hero 167 -> 128px, section h2 80 -> 62px, footer CTA 180 -> 112px, marquee 50 -> 40px); body and mono steps untouched. Ratios still 2.05 / 2.23 / 1.65, page 23% shorter. Heads in narrow side columns (Nosotros, Servicios) step down again to 40px so no headline exceeds 3 lines.
+- Second type pass (2026-08-08): cut `--step-4` only, since it drives nothing but `.display` — the section head that repeats eight times. 62 -> 54px desktop, 33.5 -> 30px mobile. Hero held at 128px, so h1/h2 separation widened 2.05 -> 2.35.
+- Third pass from screenshot review (2026-08-08): hero cut again 128 -> 104px (7.2vw). Band veil rewritten so only the two ends dissolve (the bottom half of each photo was going milky) and photo brightness 0.80 -> 0.88. Bands now open with a clip-path shutter reveal on enter, then hand off to the scrubbed parallax. Nosotros relaid out — head and lede split row 1, misión/visión and the six valores span all 12 columns, killing a ~700px void on the left; both get a staggered card entrance with the index numbers catching up a beat later.
+- Circuit polish (2026-08-08): fixed the signature animation's two green legs, which had never painted (bbox-units gradient on a zero-height path). Replaced the box-glyph truck with a side-elevation tractor-trailer — 10 pallets revealed via a clip rect so cargo empties without deforming, 5 rolling wheels, trailing speed streak. Eyebrow neutralised to "El circuito" (it read "El problema" over the resolution title). Video-instead-of-SVG was considered and declined: a scrubbed sequence costs 1.5-4MB against a 1.9MB page, and a photoreal truck cannot show an empty trailer or a closed loop.
+- Known gap after the circuit polish: on a 375px screen the diagram's 1200x340 viewBox renders as a 335x95px strip (1 unit = 0.28px). Label sizes and truck scale were compensated in a `<=900px` media query so nothing is illegible or clipped, but the horizontal layout is inherently cramped there. A proper mobile version needs the circuit redrawn vertically; not attempted.
+- Mobile circuit redrawn vertically (2026-08-08), resolving the strip problem above. Same SVG carries two path sets (`[data-orient="h"|"v"]`); CSS picks one, main.js swaps the viewBox (1200x340 <-> 420x820) since viewBox cannot be set from CSS and must be right without GSAP. One shared truck, one parameterised timeline: wide pins and mirrors at the turn, narrow scrubs without a pin and rotates through the corner. Portrait renders 335x654px at 0.8px/unit, so nothing needs scaling to stay legible.
+- Band veils + Unidades layout (2026-08-08): veil rewritten as one gradient with `--veil-enter`/`--veil-exit` knobs so BOTH edges dissolve into their neighbouring section (the aerial band was meeting the cream section above on a hard edge). Bottom cream wash reduced: ramp starts at 88% instead of 84% and peaks at 0.42 instead of 0.55. Unidades regrouped so unit 01 sits beside the headline instead of spanning a full empty row; 02-04 run 3-up below.
+- Client-feedback pass from the 3 RL decks (2026-08-30): nav/footer/favicon mark swapped to the FAITHFUL RL rombo (tall vertical rhombus + detached lower-left diamond sharing the left vertex, single-colour, viewBox 0 0 82 128), reverse-engineered by row-scanning the deck logo; lockup enlarged (mark 34px), wordmark now green-on-tinta. `--green-bright` retuned to the true brand green #48B158 (sampled from logo/decks). Client marquee upgraded from plain text to a monochrome logo-chip wall using the real deck client set (Bimbo, Mars, GEPP, Jumex, P&G, Peñafiel, Unilever, Mondelez, LALA, La Fina, La Moderna, Del Valle, Santa Clara), img-swappable.
+- Same pass, new sections: Certificaciones strip (C-TPAT, red OEA, ISO 9001:2026 "en proceso", PSCP·Carta Porte) after Clientes; Transportistas "Pon tu unidad a trabajar. Más viajes, más ingresos." (Quick Pay, Factoraje RL, PSCP, torre 24/7, backhaul, capacitación) + 4-step onboarding, kept cream so the following band still enters-cream; Presencia internacional (puertos/aeropuertos/socios, rombo-echo diamond bullets) dark, before Industrias. Client value-prop gained "Torre de control 24/7" + "Automatización de Carta Porte con PSCP" checks. Nav/overlay/footer links updated. Verified via DOM a11y + geometry (grids 4/3/4/3 desktop, all 1-col mobile, zero horizontal overflow, brand-green marks); pane screenshots blank on the animated cream sections (Lenis/GSAP compositor limit) — logo+hero+logo-wall captured, rest proven by computed styles (opacity 1, visible) + rendered text.
+- 2026-08-31: hero slot 1 -> assets/hero-video-camion.mp4 (nuevo clip camion moderno, 13.5MB->2.5MB ffmpeg 1600px crf28, sin audio); slots 2-4 pendientes de reemplazo (regla: sin logos de terceros, camiones modernos).
+- 2026-09-01: 3 clips hero nuevos via Higgsfield (Veo 3.1 fast, 8s 16:9, camiones sin marca) -> slots 2-4 comprimidos 1600px crf28 sin audio; clip nocturno regenerado 1x por logo Volvo; hero-video.mp4 viejo eliminado; 4/4 slots verificados en browser sin errores.
+- 2026-09-01: slot 2 rehecho — Veo insistia en camion americano con capo / logo Volvo (2 intentos); Seedance 2.0 720p dio cab-over europeo sin marcas al primer intento -> hero-video-2.mp4 0.7MB; 4/4 verificados, unico 416 fue cache de rango del archivo viejo.
+- 2026-09-01: transicion rara era del clip 1 del usuario: traia crossfade interno en su ultimo ~1.2s hacia toma lateral con logo SCANIA; recortado a 6.7s desde el original (2.1MB), cola verificada limpia, rotacion sin resets.
+- 2026-09-01: clip 3 (aereo) tenia dissolve interno al INICIO (~0-2.2s, cenital->persecucion con ghost); recortado desde fuente Veo a 5.6s arrancando en 2.4s; rotacion verificada sin resets, colas de 2 y 4 limpias.
+- 2026-09-02: redes sociales (IG/LI/FB) integradas en 3 superficies — iconos `.social` en el bloque de marca del footer, fila REDES en la meta de #contacto, y fila mail+iconos en el menu overlay; mas JSON-LD Organization con sameAs.
+- 2026-09-02: el menu overlay se pasaba 48px en viewports de 640px de alto al meter los iconos; resuelto agrupando mail+redes en `.menu__connect` (una fila) + `@media (max-height:700px)` que aprieta el aside. Verificado 360x640 sin clip (scrollH 661 vs vh 640).
+- 2026-09-02: logo oficial vectorizado del arte maestro (RL-13 lockup, RL-06 simbolo aislado) via trazador propio; sprite `<symbol>` + `<use>` alimenta nav, footer, 4 sellos de Certificaciones y favicon. IoU 0.996 lockup / 0.997 simbolo.
+- 2026-09-02: el simbolo que ya estaba en la pagina resulto correcto dentro de ~1% (solo 4% mas ancho); la diferencia real contra el oficial era el wordmark, que era texto CSS en Archivo y ahora son contornos. Se pierde el bicolor RETORNO/LOGISTICO: el oficial es un solo color.
