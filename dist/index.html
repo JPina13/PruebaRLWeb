@@ -1,0 +1,843 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Retorno Logístico — Tu camión regresa vacío. Nosotros lo llenamos.</title>
+  <meta name="description" content="Plataforma de carga de retorno en México. Empatamos tu viaje de vuelta con carga real de 500 puntos de origen para que ningún kilómetro se recorra vacío." />
+  <meta name="theme-color" content="#0a0f0a" />
+
+  <meta property="og:title" content="Retorno Logístico — Tu camión regresa vacío. Nosotros lo llenamos." />
+  <meta property="og:description" content="Carga de retorno empatada con 500 puntos de origen. 12,458 cargas entregadas · 1,796 clientes · 1,500 transportistas certificados." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_MX" />
+
+  <!-- Fonts self-hosted: kills two render-blocking third-party round trips. -->
+  <link rel="preload" href="assets/fonts/archivo-var-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="styles/main.css" />
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%230a0f0a'/><g transform='translate(18.5 10) scale(0.344)' fill='%2337B04A'><path d='M17.66 35.27 L35.27 63.95 L17.66 92.63 L0.05 64.05Z'/><path d='M39.32 0.05 L78.68 63.95 L39.32 127.95 L22.76 101.01 L45.48 63.95 L22.76 27.09Z'/></g></svg>" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Retorno Logístico",
+    "legalName": "Retorno Logístico, S. de R.L. de C.V.",
+    "email": "contacto@retornologistico.com",
+    "telephone": "+52-442-251-5932",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. Antea 1032, oficina 302, piso 3, Edificio Torre Capital, Col. Ejido Jurica",
+      "addressLocality": "Querétaro",
+      "addressRegion": "Querétaro",
+      "postalCode": "76100",
+      "addressCountry": "MX"
+    },
+    "sameAs": [
+      "https://www.instagram.com/retorno.logistico",
+      "https://www.linkedin.com/company/retorno-logistico-qro/",
+      "https://www.facebook.com/share/1GQQq6uCK3/"
+    ]
+  }
+  </script>
+<meta name="robots" content="noindex, nofollow"></head>
+<body>
+
+  <!-- Brand sprite. Both marks are traced straight from the official artwork
+       (RL-13 lockup, RL-06 isolated mark), so they are the logo, not a
+       redraw of it. evenodd keeps the counters open. -->
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="rl-lockup" viewBox="0 0 460.21 128" fill-rule="evenodd"><path d="M17.6 35.27 L35.27 63.94 L17.71 92.51 L0.05 63.94Z"/><path d="M39.3 0.05 L65.69 42.79 L65.9 32 L103.41 32.1 L107.01 32.76 L109.41 33.63 L111.59 34.94 L113.44 36.68 L115.62 40.5 L116.6 44.86 L116.6 51.08 L115.4 55.87 L113.55 59.03 L110.82 61.43 L107.44 62.96 L102.21 63.83 L121.18 82.8 L103.41 82.91 L84.22 63.83 L78.66 63.94 L78.55 63.72 L78.55 82.8 L66.88 83.02 L39.3 127.83 L23.6 102.32 L22.84 100.68 L44.64 65.36 L45.41 63.72 L22.73 26.98ZM78.66 44.86 L101.77 44.86 L102.65 45.19 L103.41 45.95 L103.85 47.15 L103.85 48.68 L103.41 49.88 L102.76 50.53 L101.66 50.97 L78.66 50.97Z"/><path d="M66.23 98.5 L71.57 98.5 L71.57 121.62 L89.02 121.73 L89.02 127.07 L66.23 127.07Z"/><path d="M123.14 97.63 L126.52 97.63 L129.47 98.18 L131.54 98.94 L134.37 100.57 L136.55 102.54 L137.97 104.39 L139.28 107.01 L140.04 109.95 L140.15 114.75 L139.83 116.71 L139.06 119.11 L137.54 121.84 L135.46 124.12 L133.07 125.87 L130.78 126.96 L127.29 127.83 L123.47 127.94 L121.07 127.61 L118.35 126.74 L115.4 125.11 L112.89 122.82 L111.48 120.85 L110.28 118.24 L109.62 115.4 L109.52 111.15 L109.84 108.97 L110.82 106.03 L112.57 103.19 L114.64 101.12 L117.04 99.48 L119.87 98.29ZM123.47 103.19 L126.96 103.3 L129.14 103.95 L130.88 104.94 L133.17 107.44 L134.37 110.61 L134.37 114.97 L133.17 118.13 L132.41 119.22 L130.23 121.07 L126.85 122.27 L122.82 122.27 L119.44 121.07 L118.35 120.31 L116.49 118.13 L115.29 114.75 L115.29 110.71 L116.71 107.12 L118.02 105.59 L119.87 104.28Z"/><path d="M123.14 32.1 L173.95 32.1 L173.95 44.64 L136.01 44.64 L135.79 44.86 L135.9 51.18 L167.63 51.18 L167.63 63.72 L136.01 63.72 L135.79 63.94 L135.79 70.16 L173.95 70.26 L173.95 82.8 L123.14 82.8Z"/><path d="M177.77 97.63 L182.24 97.74 L186.27 98.83 L189.54 100.79 L191.5 102.76 L192.6 104.39 L186.93 106.9 L184.09 104.28 L182.02 103.41 L180.27 103.08 L178.42 103.08 L176.13 103.52 L172.97 105.15 L170.68 107.77 L169.7 110.06 L169.37 112.02 L169.48 114.42 L170.14 116.71 L171.33 118.67 L172.86 120.2 L174.93 121.51 L177.22 122.27 L178.97 122.49 L181.8 122.27 L184.2 121.51 L186.05 120.42 L188.78 117.47 L189.11 116.27 L178.31 116.27 L178.31 110.82 L195.32 110.82 L194.99 116.27 L193.9 119.55 L192.6 121.73 L190.41 124.12 L188.12 125.76 L185.29 127.07 L182.67 127.72 L180.93 127.94 L176.35 127.72 L173.84 127.07 L170.57 125.43 L168.61 123.91 L166.32 121.18 L165.01 118.56 L164.25 115.62 L164.14 110.82 L164.47 108.86 L165.45 106.03 L166.97 103.52 L169.15 101.23 L171.33 99.7 L174.5 98.29Z"/><path d="M180.38 32.1 L231.19 32.1 L231.19 44.64 L212.33 44.64 L212.11 44.86 L212.11 82.8 L199.46 82.8 L199.46 44.75 L180.38 44.64Z"/><path d="M219.74 98.5 L225.09 98.5 L225.09 127.07 L219.74 127.07Z"/><path d="M251.36 32.1 L274.8 32.1 L277.31 32.43 L280.36 33.3 L282.33 34.29 L283.85 35.38 L286.25 38.21 L287.67 41.48 L288.43 46.06 L288.32 70.16 L287.67 73.43 L286.69 75.93 L285.27 78.11 L282.54 80.51 L279.16 82.04 L275.02 82.8 L251.03 82.8 L247.33 82.15 L244.71 81.17 L242.09 79.42 L239.91 76.81 L238.28 72.88 L237.62 67.98 L237.62 47.04 L238.28 42.03 L239.91 38.1 L242.53 35.16 L246.02 33.19ZM253.32 44.75 L272.73 44.75 L274.26 45.08 L275.02 45.62 L275.68 47.04 L275.68 67.87 L274.8 69.5 L273.06 70.16 L253 70.16 L251.58 69.72 L250.82 68.96 L250.38 67.65 L250.38 47.26 L250.71 46.17 L251.47 45.3Z"/><path d="M261.94 97.74 L266.08 97.85 L269.79 98.5 L273.49 99.92 L276.44 101.88 L273.39 106.46 L269.35 104.28 L265.21 103.3 L261.28 103.3 L258.88 103.74 L257.25 104.5 L256.49 105.26 L256.16 106.14 L256.49 107.33 L257.79 108.32 L260.19 108.86 L266.19 109.19 L270.66 109.95 L274.15 111.37 L276 113.11 L276.98 115.18 L277.31 117.69 L277.09 120.2 L276.55 121.94 L275.68 123.47 L274.37 124.89 L272.62 126.09 L270.22 127.07 L267.61 127.61 L264.34 127.83 L258.78 127.29 L256.38 126.63 L253.43 125.32 L249.4 122.49 L252.34 117.8 L257.14 120.75 L262.16 122.16 L265.43 122.27 L268.04 121.84 L270.22 120.75 L271.1 119.76 L271.53 118.56 L271.42 117.37 L270.01 116.06 L267.5 115.51 L260.19 115.08 L256.81 114.42 L253.11 112.68 L251.91 111.48 L251.03 109.95 L250.6 108.21 L250.6 105.59 L251.14 103.52 L252.23 101.66 L253.65 100.25 L256.16 98.83 L258.88 98.07Z"/><path d="M294.86 32.1 L332.04 32.1 L334.55 32.43 L337.6 33.3 L341.09 35.38 L343.49 38.21 L344.58 40.5 L345.34 43.33 L345.67 49.88 L345.24 53.04 L344.47 55.65 L342.51 59.03 L339.78 61.43 L336.4 62.96 L331.17 63.83 L350.14 82.8 L332.26 82.8 L313.18 63.72 L307.73 63.72 L307.51 63.94 L307.51 82.8 L294.86 82.8ZM307.73 44.75 L330.84 44.86 L331.72 45.19 L332.59 46.06 L332.92 47.04 L332.92 48.79 L332.04 50.42 L330.3 51.08 L307.62 51.08Z"/><path d="M297.37 98.5 L324.41 98.5 L324.41 103.85 L313.62 103.95 L313.62 127.07 L308.17 127.07 L308.17 103.95 L297.37 103.85Z"/><path d="M347.42 98.5 L352.76 98.5 L352.76 127.07 L347.42 127.07Z"/><path d="M352.1 32.1 L361.15 32.1 L390.16 61.11 L390.26 32.1 L402.91 32.1 L402.91 82.8 L393.86 82.8 L364.86 53.8 L364.75 82.8 L352.1 82.8Z"/><path d="M391.46 97.63 L396.48 97.85 L399.21 98.61 L401.06 99.48 L403.68 101.34 L405.53 103.19 L407.6 106.03 L402.58 108.21 L399.97 105.59 L397.02 103.85 L394.08 103.08 L391.46 103.08 L389.17 103.63 L386.78 104.94 L385.25 106.46 L384.16 108.21 L383.18 112.13 L383.61 115.84 L384.27 117.47 L385.36 119.11 L387.65 121.07 L388.96 121.73 L391.46 122.38 L393.64 122.49 L396.26 122.05 L399.64 120.31 L402.58 117.15 L407.27 120.2 L405.2 122.93 L402.48 125.32 L399.97 126.74 L397.13 127.61 L394.19 127.94 L390.48 127.72 L387.21 126.85 L384.6 125.54 L382.31 123.91 L380.45 121.84 L378.93 119 L378.05 115.95 L377.84 114.42 L378.05 109.52 L378.6 107.33 L380.23 104.06 L382.41 101.56 L385.14 99.59 L388.52 98.18Z"/><path d="M423.08 32.1 L446.52 32.1 L449.03 32.43 L452.08 33.3 L454.05 34.29 L455.57 35.38 L457.97 38.21 L459.39 41.48 L460.15 45.95 L460.15 68.96 L459.61 72.66 L458.3 76.15 L456.99 78.11 L454.26 80.51 L450.88 82.04 L446.74 82.8 L422.76 82.8 L418.29 81.93 L415.45 80.62 L413.81 79.42 L411.63 76.81 L410 72.88 L409.34 67.87 L409.34 47.15 L409.56 44.32 L410.22 41.26 L412.07 37.45 L414.69 34.83 L418.72 32.87ZM425.04 44.75 L444.45 44.75 L445.98 45.08 L446.74 45.62 L447.4 47.04 L447.4 67.98 L446.41 69.61 L444.78 70.16 L424.72 70.16 L423.3 69.72 L422.54 68.96 L422.1 67.65 L422.1 47.26 L422.43 46.17 L423.19 45.3Z"/><path d="M443.14 97.63 L446.41 97.63 L449.36 98.18 L451.21 98.83 L454.16 100.47 L456.77 102.86 L457.97 104.5 L459.17 106.9 L459.93 109.73 L460.15 111.8 L459.93 115.84 L459.17 118.67 L457.97 121.07 L455.14 124.34 L453.17 125.76 L450.99 126.85 L447.94 127.72 L446.2 127.94 L441.62 127.72 L438.78 126.96 L436.17 125.65 L433.99 124.02 L432.13 121.94 L430.5 119 L429.62 115.84 L429.41 111.7 L429.84 108.64 L430.61 106.35 L432.24 103.52 L434.42 101.23 L436.6 99.7 L440.2 98.18ZM443.47 103.19 L446.85 103.3 L450.12 104.5 L452.74 106.9 L453.72 108.64 L454.26 110.39 L454.37 114.53 L453.72 116.93 L452.85 118.56 L450.34 120.96 L446.74 122.27 L442.82 122.27 L439.55 121.18 L436.93 118.89 L436.06 117.47 L435.29 115.18 L435.08 113.66 L435.29 110.39 L435.84 108.64 L437.04 106.57 L439.44 104.5 L441.73 103.52Z"/></symbol>
+    <symbol id="rl-mark" viewBox="0 0 78.72 128" fill-rule="evenodd"><path d="M17.66 35.27 L35.27 63.95 L17.66 92.63 L0.05 64.05Z"/><path d="M39.32 0.05 L78.68 63.95 L39.32 127.95 L22.76 101.01 L45.48 63.95 L22.76 27.09Z"/></symbol>
+  </svg>
+
+  <noscript><style>.nav__menu { display:flex !important; flex-wrap:wrap; font-size:12px; gap:8px; } .nav__toggle { display:none; } .nav { flex-wrap:wrap; } [data-orient="v"] { display:none !important; } [data-orient="h"] { display:block !important; }</style></noscript>
+  <!-- Film grain — one fixed layer, pointer-transparent. -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav" id="nav">
+    <a class="nav__logo" href="#top" aria-label="Retorno Logístico — inicio">
+      <svg class="nav__lockup" viewBox="0 0 460.21 128" aria-hidden="true" focusable="false"><use href="#rl-lockup"/></svg>
+    </a>
+
+    <nav class="nav__menu" aria-label="Principal">
+      <a href="#circuito">Circuito</a>
+      <a href="#transportistas">Transportistas</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#internacional">Internacional</a>
+      <a href="#nosotros">Nosotros</a>
+    </nav>
+
+    <a class="btn btn--primary btn--pill nav__cta" href="#contacto">
+      <span>Preparar correo</span>
+    </a>
+
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="overlay-menu" aria-label="Abrir menú">
+      <span class="nav__toggle-bar"></span>
+      <span class="nav__toggle-bar"></span>
+    </button>
+  </header>
+
+  <!-- ===================== OVERLAY MENU ===================== -->
+  <div class="menu" id="overlay-menu" hidden>
+    <nav class="menu__links" aria-label="Principal (pantalla completa)">
+      <a href="#clientes"><span class="menu__index">01</span><span class="menu__label">Clientes</span></a>
+      <a href="#circuito"><span class="menu__index">02</span><span class="menu__label">Circuito</span></a>
+      <a href="#transportistas"><span class="menu__index">03</span><span class="menu__label">Transportistas</span></a>
+      <a href="#unidades"><span class="menu__index">04</span><span class="menu__label">Unidades</span></a>
+      <a href="#servicios"><span class="menu__index">05</span><span class="menu__label">Servicios</span></a>
+      <a href="#internacional"><span class="menu__index">06</span><span class="menu__label">Internacional</span></a>
+      <a href="#nosotros"><span class="menu__index">07</span><span class="menu__label">Nosotros</span></a>
+    </nav>
+    <div class="menu__aside">
+      <div class="menu__meta">
+        <span>Querétaro, México</span>
+        <span data-local-time>—</span>
+      </div>
+      <a class="btn btn--primary" href="#contacto"><span>Preparar correo</span></a>
+      <div class="menu__connect">
+        <a class="menu__mail" href="mailto:contacto@retornologistico.com">contacto@retornologistico.com</a>
+        <a class="menu__mail" href="tel:+524422515932">+52 (442) 2 51 59 32</a>
+        <ul class="social social--compact" aria-label="Retorno Logistico en redes sociales">
+          <li><a href="https://www.instagram.com/retorno.logistico" target="_blank" rel="noopener" aria-label="Instagram de Retorno Logistico"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2c2.72 0 3.06.01 4.12.06 1.07.05 1.8.22 2.43.46.66.26 1.22.6 1.77 1.16.56.55.9 1.11 1.16 1.77.24.63.41 1.36.46 2.43.05 1.06.06 1.4.06 4.12s-.01 3.06-.06 4.12c-.05 1.07-.22 1.8-.46 2.43-.26.66-.6 1.22-1.16 1.77-.55.56-1.11.9-1.77 1.16-.63.24-1.36.41-2.43.46-1.06.05-1.4.06-4.12.06s-3.06-.01-4.12-.06c-1.07-.05-1.8-.22-2.43-.46a4.9 4.9 0 0 1-1.77-1.16 4.9 4.9 0 0 1-1.16-1.77c-.24-.63-.41-1.36-.46-2.43C2.01 15.06 2 14.72 2 12s.01-3.06.06-4.12c.05-1.07.22-1.8.46-2.43.26-.66.6-1.22 1.16-1.77.55-.56 1.11-.9 1.77-1.16.63-.24 1.36-.41 2.43-.46C8.94 2.01 9.28 2 12 2Zm0 1.8c-2.67 0-2.99.01-4.04.06-.98.04-1.5.2-1.86.34-.47.18-.8.4-1.15.75-.35.35-.57.68-.75 1.15-.14.36-.3.88-.34 1.86-.05 1.05-.06 1.37-.06 4.04s.01 2.99.06 4.04c.04.98.2 1.5.34 1.86.18.47.4.8.75 1.15.35.35.68.57 1.15.75.36.14.88.3 1.86.34 1.05.05 1.37.06 4.04.06s2.99-.01 4.04-.06c.98-.04 1.5-.2 1.86-.34.47-.18.8-.4 1.15-.75.35-.35.57-.68.75-1.15.14-.36.3-.88.34-1.86.05-1.05.06-1.37.06-4.04s-.01-2.99-.06-4.04c-.04-.98-.2-1.5-.34-1.86a3.1 3.1 0 0 0-.75-1.15 3.1 3.1 0 0 0-1.15-.75c-.36-.14-.88-.3-1.86-.34-1.05-.05-1.37-.06-4.04-.06Zm0 3.07a5.13 5.13 0 1 1 0 10.26 5.13 5.13 0 0 1 0-10.26Zm0 1.8a3.33 3.33 0 1 0 0 6.66 3.33 3.33 0 0 0 0-6.66Zm5.34-3.2a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4Z"/></svg></a></li>
+          <li><a href="https://www.linkedin.com/company/retorno-logistico-qro/" target="_blank" rel="noopener" aria-label="LinkedIn de Retorno Logistico"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14Zm1.78 13.02H3.55V9h3.57v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0Z"/></svg></a></li>
+          <li><a href="https://www.facebook.com/share/1GQQq6uCK3/" target="_blank" rel="noopener" aria-label="Facebook de Retorno Logistico"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.19 2.24.19v2.47h-1.26c-1.24 0-1.63.78-1.63 1.57v1.88h2.78l-.45 2.91h-2.33V22c4.78-.76 8.44-4.92 8.44-9.94Z"/></svg></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <main id="top">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="hero" data-parallax-scope>
+      <div class="hero-cursor" aria-hidden="true">
+        <span class="hero-cursor__dot"></span>
+        <span class="hero-cursor__ring"></span>
+      </div>
+
+       <div class="hero__video" aria-hidden="true">
+        <video
+          class="hero__video-el is-active"
+          data-hero-video="1"
+          data-src="assets/hero-video-camion.mp4"
+          muted playsinline preload="none"
+          poster="assets/img/hero-poster.webp"
+        ></video>
+        <video class="hero__video-el" data-hero-video="2" data-src="assets/hero-video-2.mp4" muted playsinline preload="none"></video>
+        <video class="hero__video-el" data-hero-video="3" data-src="assets/hero-video-3.mp4" muted playsinline preload="none"></video>
+        <video class="hero__video-el" data-hero-video="4" data-src="assets/hero-video-4.mp4" muted playsinline preload="none"></video>
+        <div class="hero__vignette"></div>
+      </div> 
+
+      <!-- Atmosphere only: a ruled plane and one pointer-tracked spot. The
+           orbiting rings and mouse-driven circuit lines were removed — the
+           circuit idea now belongs to the signature section, where it means
+           something. -->
+      <svg class="hero__grid" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <defs>
+          <radialGradient id="hero-spot" cx="50%" cy="50%" r="40%">
+            <stop offset="0%" stop-color="#39aa35" stop-opacity="0.20"/>
+            <stop offset="55%" stop-color="#39aa35" stop-opacity="0.05"/>
+            <stop offset="100%" stop-color="#39aa35" stop-opacity="0"/>
+          </radialGradient>
+          <pattern id="hero-pattern" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+            <path d="M80 0 L0 0 0 80" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+          </pattern>
+        </defs>
+        <rect class="hero__grid-rect" width="1600" height="900" fill="url(#hero-pattern)"/>
+        <circle class="hero__spot" cx="800" cy="450" r="360" fill="url(#hero-spot)"/>
+      </svg>
+
+      <div class="hero__content grid12">
+        <p class="hero__eyebrow" data-hero-el>
+          <span class="pulse-dot"></span>
+          <span>Querétaro, México · Plataforma de carga de retorno</span>
+        </p>
+
+        <h1 class="hero__title" data-split>
+          <span class="line"><span class="line__inner">Tu camión regresa vacío.</span></span>
+          <span class="line"><span class="line__inner">Nosotros lo <em>llenamos</em>.</span></span>
+        </h1>
+
+        <p class="hero__lede" data-hero-el>
+          Retorno Logístico empata tu viaje de vuelta con carga real de 500 puntos de origen en México. El mismo camión, el mismo diesel, el doble de ingreso.
+        </p>
+
+        <div class="hero__actions" data-hero-el>
+          <a class="btn btn--primary btn--lg" href="#contacto">
+            <span>Preparar correo</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true" width="18" height="18"><path d="M5 12h12M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <span class="hero__signature">Cerramos el círculo. Cargado–Cargado.</span>
+        </div>
+
+        <ul class="hero__stats" aria-label="Métricas de operación" data-hero-el>
+          <li><strong data-counter="12458">0</strong><span>cargas entregadas</span></li>
+          <li><strong data-counter="1796">0</strong><span>clientes</span></li>
+          <li><strong data-counter="1500">0</strong><span>transportistas certificados</span></li>
+          <li><strong data-counter="500">0</strong><span>puntos de origen</span></li>
+        </ul>
+      </div>
+
+     <!-- <div class="hero__scroll" aria-hidden="true" data-hero-el>
+        <span class="hero__scroll-rule"></span>
+        <span>Baja para ver el circuito</span>
+      </div> -->
+    </section>
+
+    <div class="notch" aria-hidden="true">
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none"><path d="M0 0 L620 0 L660 40 L780 40 L820 0 L1440 0 L1440 60 L0 60 Z" fill="#f4f6f2"/></svg>
+    </div>
+
+    <!-- ===================== CLIENTES — social proof, directly after the hero ===================== -->
+    <section class="section section--light section--tight" id="clientes">
+      <div class="container grid12">
+        <p class="eyebrow col-full" data-reveal>— Cada semana movemos carga de</p>
+      </div>
+
+      <!-- Logo wall. Real client logos extracted from the RL deck ("clientes
+           que confían en nosotros"), trimmed and colour-matched to the cream
+           ground; the few that ship on their own plate (GEPP, La Fina, La
+           Moderna) keep it. Del Valle + Santa Clara share one lockup (the
+           deck's bottle-cap art). Second row is aria-hidden — the loop clone. -->
+      <div class="logo-marquee" role="group" aria-label="Marcas que confían en Retorno Logístico">
+        <div class="logo-marquee__track">
+          <span class="logo-chip"><img src="assets/img/clients/grupo-bimbo.webp" width="166" height="96" alt="Grupo Bimbo" loading="lazy" decoding="async"></span><span class="logo-chip"><img src="assets/img/clients/mars.webp" width="320" height="73" alt="Mars" loading="lazy" decoding="async"></span><span class="logo-chip"><img src="assets/img/clients/gepp.webp" width="179" height="96" alt="GEPP" loading="lazy" decoding="async"></span><span class="logo-chip"><img src="assets/img/clients/grupo-jumex.webp" width="320" height="94" alt="Grupo Jumex" loading="lazy" decoding="async"></span><span class="logo-chip"><img src="assets/img/clients/pg.webp" width="96" height="96" alt="P&amp;G" loading="lazy" decoding="async"></span><span class="logo-chip"><img src="assets/img/clients/penafiel.webp" width="128" height="96" alt="Peñafiel" loading="lazy" decoding="async"></span><span class="logo-chip"><img src="assets/img/clients/unilever.webp" width="87" height="96" alt="Unilever" loading="lazy" decoding="async"></span><span class="logo-chip"><img src="assets/img/clients/mondelez.webp" width="221" height="96" alt="Mondelēz" loading="lazy" decoding="async"></span><span class="logo-chip"><img src="assets/img/clients/lala.webp" width="102" height="96" alt="LALA" loading="lazy" decoding="async"></span><span class="logo-chip"><img src="assets/img/clients/la-fina.webp" width="111" height="96" alt="La Fina" loading="lazy" decoding="async"></span><span class="logo-chip"><img src="assets/img/clients/la-moderna.webp" width="320" height="49" alt="La Moderna" loading="lazy" decoding="async"></span><span class="logo-chip"><img src="assets/img/clients/del-valle-santa-clara.webp" width="91" height="96" alt="Del Valle y Santa Clara" loading="lazy" decoding="async"></span>
+          <span class="logo-chip" aria-hidden="true"><img src="assets/img/clients/grupo-bimbo.webp" width="166" height="96" alt="" loading="lazy" decoding="async"></span><span class="logo-chip" aria-hidden="true"><img src="assets/img/clients/mars.webp" width="320" height="73" alt="" loading="lazy" decoding="async"></span><span class="logo-chip" aria-hidden="true"><img src="assets/img/clients/gepp.webp" width="179" height="96" alt="" loading="lazy" decoding="async"></span><span class="logo-chip" aria-hidden="true"><img src="assets/img/clients/grupo-jumex.webp" width="320" height="94" alt="" loading="lazy" decoding="async"></span><span class="logo-chip" aria-hidden="true"><img src="assets/img/clients/pg.webp" width="96" height="96" alt="" loading="lazy" decoding="async"></span><span class="logo-chip" aria-hidden="true"><img src="assets/img/clients/penafiel.webp" width="128" height="96" alt="" loading="lazy" decoding="async"></span><span class="logo-chip" aria-hidden="true"><img src="assets/img/clients/unilever.webp" width="87" height="96" alt="" loading="lazy" decoding="async"></span><span class="logo-chip" aria-hidden="true"><img src="assets/img/clients/mondelez.webp" width="221" height="96" alt="" loading="lazy" decoding="async"></span><span class="logo-chip" aria-hidden="true"><img src="assets/img/clients/lala.webp" width="102" height="96" alt="" loading="lazy" decoding="async"></span><span class="logo-chip" aria-hidden="true"><img src="assets/img/clients/la-fina.webp" width="111" height="96" alt="" loading="lazy" decoding="async"></span><span class="logo-chip" aria-hidden="true"><img src="assets/img/clients/la-moderna.webp" width="320" height="49" alt="" loading="lazy" decoding="async"></span><span class="logo-chip" aria-hidden="true"><img src="assets/img/clients/del-valle-santa-clara.webp" width="91" height="96" alt="" loading="lazy" decoding="async"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CERTIFICACIONES — credenciales de seguridad y
+         estándares internacionales, justo tras la prueba social. ===================== -->
+    <section class="section section--cream section--tight" id="certificaciones">
+      <div class="container grid12">
+        <p class="eyebrow col-full" data-reveal>— Tecnología, seguridad y estándares internacionales</p>
+        <ul class="certs" data-reveal data-reveal-delay="1">
+          <li class="cert">
+            <svg class="cert__mark" viewBox="0 0 78.72 128" aria-hidden="true" focusable="false"><use href="#rl-mark"/></svg>
+            <div class="cert__body">
+              <strong>C-TPAT</strong>
+              <span>Socio certificado ante CBP. Cadena de suministro validada para cruces a EE. UU.</span>
+            </div>
+          </li>
+          <li class="cert">
+            <svg class="cert__mark" viewBox="0 0 78.72 128" aria-hidden="true" focusable="false"><use href="#rl-mark"/></svg>
+            <div class="cert__body">
+              <strong>Red OEA</strong>
+              <span>Transportistas con certificación de Operador Económico Autorizado.</span>
+            </div>
+          </li>
+          <li class="cert">
+            <svg class="cert__mark" viewBox="0 0 78.72 128" aria-hidden="true" focusable="false"><use href="#rl-mark"/></svg>
+            <div class="cert__body">
+              <strong>ISO 9001:2026 <em class="cert__tag">En proceso</em></strong>
+              <span>Sistema de gestión de calidad en certificación.</span>
+            </div>
+          </li>
+          <li class="cert">
+            <svg class="cert__mark" viewBox="0 0 78.72 128" aria-hidden="true" focusable="false"><use href="#rl-mark"/></svg>
+            <div class="cert__body">
+              <strong>PSCP · Carta Porte</strong>
+              <span>Plataforma de Servicios Carta Porte: automatización del CFDI con Complemento Carta Porte.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== EL CIRCUITO — problem, agitation, resolution.
+         Narrative climax and signature moment are the same section. ===================== -->
+    <section class="circuit" id="circuito">
+      <div class="circuit__stage">
+        <div class="container grid12 circuit__head">
+          <!-- Neutral: this label sits above BOTH halves of the argument as
+               the pinned stage crossfades from problem to resolution. -->
+          <p class="eyebrow eyebrow--light col-full" data-circuit-eyebrow>— El circuito</p>
+          <div class="circuit__titles">
+            <h2 class="display display--light circuit__title" data-circuit-title="1">El viaje de vuelta no cobra. Pero sí cuesta.</h2>
+            <h2 class="display display--light circuit__title" data-circuit-title="2">Cerramos el círculo.</h2>
+          </div>
+        </div>
+
+        <div class="circuit__diagram">
+          <svg viewBox="0 0 1200 340" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+            <defs>
+              <!-- userSpaceOnUse is mandatory here: these legs are perfectly
+                   horizontal, so their bounding box has zero height, and the
+                   SVG spec says a gradient in objectBoundingBox units on a
+                   zero-extent box is NOT RENDERED. With the default units the
+                   two green legs painted nothing at all. -->
+              <linearGradient id="leg-green" gradientUnits="userSpaceOnUse" x1="140" y1="0" x2="1060" y2="0">
+                <stop offset="0%" stop-color="#39aa35"/>
+                <stop offset="100%" stop-color="#8fd98a"/>
+              </linearGradient>
+              <!-- Vertical twin: same reason for userSpaceOnUse, axis swapped. -->
+              <linearGradient id="leg-green-v" gradientUnits="userSpaceOnUse" x1="0" y1="80" x2="0" y2="740">
+                <stop offset="0%" stop-color="#39aa35"/>
+                <stop offset="100%" stop-color="#8fd98a"/>
+              </linearGradient>
+              <!-- The cargo is revealed/hidden by shrinking this rect, so the
+                   pallets never deform the way a scaled group would. -->
+              <clipPath id="cargo-clip">
+                <rect data-trailer x="-52" y="-46" width="66" height="31"/>
+              </clipPath>
+            </defs>
+
+            <!-- Two layouts of the SAME circuit. The wide one runs the route
+                 horizontally; below 900px it is redrawn vertically, because a
+                 1200-unit-wide viewBox collapses to a ~95px strip on a phone.
+                 CSS picks the set, JS swaps the viewBox to match, and the
+                 truck below is shared by both. -->
+            <g data-orient="h">
+              <!-- Rails: the route as an engineered circuit, not a swoosh. -->
+              <path class="circuit__rail" d="M140 110 H1060" />
+              <path class="circuit__rail" d="M140 250 H1060" />
+              <path class="circuit__rail" d="M1060 110 V250" />
+              <path class="circuit__rail" d="M140 250 V110" />
+
+              <!-- Leg 1: outbound, loaded. -->
+              <path class="circuit__leg circuit__leg--out" d="M140 110 H1060" data-leg="out" />
+              <!-- Leg 2: return, empty (dashed, cold). -->
+              <path class="circuit__leg circuit__leg--empty" d="M1060 250 H140" data-leg="empty" />
+              <!-- Leg 2': the same return, loaded. -->
+              <path class="circuit__leg circuit__leg--back" d="M1060 250 H140" data-leg="back" />
+              <!-- Closers. -->
+              <path class="circuit__leg circuit__leg--close" d="M1060 110 V250" data-leg="close-a" />
+              <path class="circuit__leg circuit__leg--close" d="M140 250 V110" data-leg="close-b" />
+
+              <g class="circuit__node" data-node="origin">
+                <circle cx="140" cy="110" r="7"/>
+                <text x="140" y="82" text-anchor="middle">ORIGEN</text>
+              </g>
+              <g class="circuit__node" data-node="dest">
+                <circle cx="1060" cy="250" r="7"/>
+                <text x="1060" y="290" text-anchor="middle">DESTINO</text>
+              </g>
+            </g>
+
+            <g data-orient="v">
+              <path class="circuit__rail" d="M110 80 V740" />
+              <path class="circuit__rail" d="M310 80 V740" />
+              <path class="circuit__rail" d="M110 740 H310" />
+              <path class="circuit__rail" d="M110 80 H310" />
+
+              <path class="circuit__leg circuit__leg--out" d="M110 80 V740" data-leg="out" />
+              <path class="circuit__leg circuit__leg--empty" d="M310 740 V80" data-leg="empty" />
+              <path class="circuit__leg circuit__leg--back" d="M310 740 V80" data-leg="back" />
+              <path class="circuit__leg circuit__leg--close" d="M110 740 H310" data-leg="close-a" />
+              <path class="circuit__leg circuit__leg--close" d="M310 80 H110" data-leg="close-b" />
+
+              <g class="circuit__node" data-node="origin">
+                <circle cx="110" cy="80" r="7"/>
+                <text x="110" y="48" text-anchor="middle">ORIGEN</text>
+              </g>
+              <g class="circuit__node" data-node="dest">
+                <circle cx="310" cy="740" r="7"/>
+                <text x="310" y="778" text-anchor="middle">DESTINO</text>
+              </g>
+            </g>
+
+            <!-- Tractor-trailer, side elevation, facing right. Two rules the
+                 geometry has to keep: it is centred on x=0 so the turnaround
+                 (scaleX -1) pivots on its own centre and lands exactly on a
+                 node, and the road line is y=0 so the wheels sit tangent to
+                 the rail rather than floating over it. -->
+            <!-- The translate is AUTHORED, not JS-only: without it the truck
+                 renders at viewBox 0,0 on mobile and with scripting off.
+                 GSAP sets the identical x/y, so driving it is idempotent.
+                 The inner group exists purely so CSS can scale the artwork on
+                 small screens without touching GSAP's transform. -->
+            <g class="circuit__truck" data-truck transform="translate(140 110)">
+             <g class="circuit__truck-art">
+              <!-- Trails behind on both legs; mirrors correctly on the return. -->
+              <g class="circuit__streak" data-streak>
+                <line x1="-88" y1="-40" x2="-66" y2="-40"/>
+                <line x1="-95" y1="-30" x2="-68" y2="-30"/>
+                <line x1="-85" y1="-20" x2="-64" y2="-20"/>
+              </g>
+
+              <rect class="circuit__box" x="-55" y="-48" width="72" height="35" rx="1.5"/>
+
+              <g class="circuit__cargo" clip-path="url(#cargo-clip)">
+                <rect x="-51" y="-45" width="11" height="13"/>
+                <rect x="-38" y="-45" width="11" height="13"/>
+                <rect x="-25" y="-45" width="11" height="13"/>
+                <rect x="-12" y="-45" width="11" height="13"/>
+                <rect x="1"   y="-45" width="11" height="13"/>
+                <rect x="-51" y="-31" width="11" height="13"/>
+                <rect x="-38" y="-31" width="11" height="13"/>
+                <rect x="-25" y="-31" width="11" height="13"/>
+                <rect x="-12" y="-31" width="11" height="13"/>
+                <rect x="1"   y="-31" width="11" height="13"/>
+              </g>
+
+              <path class="circuit__frame" d="M-55 -13 H55"/>
+              <path class="circuit__cab" d="M20 -13 V-38 L30 -47 H45 L55 -31 V-13 Z"/>
+              <path class="circuit__glass" d="M33 -43 H43 L50 -32 H33 Z"/>
+              <path class="circuit__stack" d="M18 -38 V-55"/>
+
+              <!-- Translate on a wrapper, rotate the inner group: GSAP writes
+                   its own transform attribute, so the two must not share an
+                   element or the placement gets overwritten. -->
+              <g transform="translate(-42 -6)"><g class="circuit__wheel" data-wheel>
+                <circle class="tire" r="6"/><circle class="hub" r="2"/><path class="spoke" d="M0 -6 V6 M-6 0 H6"/>
+              </g></g>
+              <g transform="translate(-30 -6)"><g class="circuit__wheel" data-wheel>
+                <circle class="tire" r="6"/><circle class="hub" r="2"/><path class="spoke" d="M0 -6 V6 M-6 0 H6"/>
+              </g></g>
+              <g transform="translate(24 -6)"><g class="circuit__wheel" data-wheel>
+                <circle class="tire" r="6"/><circle class="hub" r="2"/><path class="spoke" d="M0 -6 V6 M-6 0 H6"/>
+              </g></g>
+              <g transform="translate(35 -6)"><g class="circuit__wheel" data-wheel>
+                <circle class="tire" r="6"/><circle class="hub" r="2"/><path class="spoke" d="M0 -6 V6 M-6 0 H6"/>
+              </g></g>
+              <g transform="translate(49 -6)"><g class="circuit__wheel" data-wheel>
+                <circle class="tire" r="6"/><circle class="hub" r="2"/><path class="spoke" d="M0 -6 V6 M-6 0 H6"/>
+              </g></g>
+             </g>
+            </g>
+          </svg>
+
+          <p class="circuit__cost" data-circuit-cost>
+            Diesel. Casetas. Horas del operador. Depreciación. Con la caja vacía corren igual.
+          </p>
+        </div>
+
+        <div class="container grid12 circuit__legend">
+          <ol class="circuit__steps">
+            <li data-circuit-step="1"><span>01</span> Salida, cargado</li>
+            <li data-circuit-step="2"><span>02</span> Retorno vacío: 100% del costo, 0% del ingreso</li>
+            <li data-circuit-step="3"><span>03</span> Retorno cargado: el circuito cierra</li>
+          </ol>
+          <p class="circuit__kpi" data-circuit-kpi><strong>−22%</strong><span>de deadhead en lanes con retorno asignado</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROPUESTA DE VALOR ===================== -->
+    <section class="section section--light section--tall section--bleed" id="propuesta">
+      <div class="container grid12 value-prop">
+        <div class="value-prop__copy" data-reveal>
+          <p class="eyebrow">— Cómo se cierra</p>
+          <h2 class="display">Menos millas vacías. Más margen por kilómetro.</h2>
+          <p class="lede">Mientras el mercado optimiza tramos, nosotros diseñamos circuitos. Tú firmas una tarifa; nosotros resolvemos las dos puntas.</p>
+          <ul class="checks">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12 L10 18 L20 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Matcheo algorítmico de cargas de retorno</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12 L10 18 L20 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Torre de control 24/7 — monitoreo humano + GPS satelital</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12 L10 18 L20 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Automatización de Carta Porte con la plataforma PSCP</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12 L10 18 L20 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Integración TMS + WMS + EDI a tus sistemas</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12 L10 18 L20 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Cobertura USMCA con documentación incluida</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12 L10 18 L20 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Red de 1,500 transportistas auditados</li>
+          </ul>
+        </div>
+
+        <aside aria-label="Beneficios para transportistas" class="value-prop__kpis" data-reveal data-reveal-delay="2">
+          <div class="kpi"><strong>−22%</strong><span>reducción típica de deadhead en lanes con retorno asignado</span></div>
+          <div class="kpi"><strong>85%</strong><span>utilización de unidad en circuitos cerrados</span></div>
+          <div class="kpi"><strong>24/7</strong><span>monitoreo humano + telematics</span></div>
+          <div class="kpi"><strong>18</strong><span>industrias con SLAs activos</span></div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ===================== TRANSPORTISTAS — el otro lado del circuito.
+         Fondo crema (como Propuesta) para que la banda siguiente siga
+         entrando en crema. ===================== -->
+    <section class="section section--cream section--tall" id="transportistas">
+      <div class="container grid12">
+        <header class="section__head" data-reveal>
+          <p class="eyebrow">— Para transportistas</p>
+          <h2 class="display">Pon tu unidad a trabajar. Más viajes, más ingresos.</h2>
+          <p class="lede">Súmate a la red RL y llena tus retornos. Cobra rápido, conserva liquidez y opera con respaldo tecnológico y de seguridad.</p>
+        </header>
+
+        <div class="carrier">
+          <article class="benefit" data-card>
+            <p class="benefit__k">Quick Pay</p>
+            <h3>Pronto pago</h3>
+            <p>Liquidación de facturas sencilla y expedita. Cobra tus viajes sin esperar semanas.</p>
+          </article>
+          <article class="benefit" data-card>
+            <p class="benefit__k">Factoraje RL</p>
+            <h3>Liquidez inmediata</h3>
+            <p>Sistema de factoraje interno: días de crédito mínimos para recuperar tu capital de trabajo.</p>
+          </article>
+          <article class="benefit" data-card>
+            <p class="benefit__k">PSCP</p>
+            <h3>Carta Porte automática</h3>
+            <p>Generación del CFDI con Complemento Carta Porte desde la plataforma. Cero trámite manual.</p>
+          </article>
+          <article class="benefit" data-card>
+            <p class="benefit__k">Torre de control</p>
+            <h3>Monitoreo 24/7</h3>
+            <p>Seguimiento GPS satelital, protocolos de seguridad y reacción para ti y tu carga.</p>
+          </article>
+          <article class="benefit" data-card>
+            <p class="benefit__k">Backhaul</p>
+            <h3>Más viajes de retorno</h3>
+            <p>Cargas de retorno con 500 puntos de origen. Menos kilómetros vacíos, más ingreso por unidad.</p>
+          </article>
+          <article class="benefit" data-card>
+            <p class="benefit__k">Capacitación</p>
+            <h3>Estándares RL</h3>
+            <p>Formación en protocolos de seguridad y certificación OEA para tu operación.</p>
+          </article>
+        </div>
+
+        <div class="onboarding" data-reveal>
+          <p class="eyebrow">— Cómo te sumas a la red</p>
+          <ol class="onboarding__steps">
+            <li data-card><span class="onboarding__num">01</span><h4>Registro y validación</h4><p>Alta de tu empresa y documentación: RFC, seguros y permisos SCT.</p></li>
+            <li data-card><span class="onboarding__num">02</span><h4>Certificación de seguridad</h4><p>Auditoría de unidad y protocolos. Ingreso a la red de transportistas OEA.</p></li>
+            <li data-card><span class="onboarding__num">03</span><h4>Alta en plataforma</h4><p>Conexión a PSCP y a la torre de control 24/7. Documentos digitales.</p></li>
+            <li data-card><span class="onboarding__num">04</span><h4>Primer viaje asignado</h4><p>Recibes tu primera carga de retorno y empiezas a facturar con pronto pago.</p></li>
+          </ol>
+        </div>
+
+        <a class="btn btn--primary" href="#contacto" data-reveal><span>Únete a la red de transportistas</span></a>
+      </div>
+    </section>
+
+    <!-- ============ BANDA — circuito en carretera ============
+         La precede Transportistas (fondo crema) y la sigue Unidades (fondo tinta):
+         entra en crema, sale en tinta. -->
+    <div class="band band--enter-cream" data-band>
+      <img
+        class="band__img band__img--photo"
+        src="assets/img/nosotros.webp"
+        alt="Vista aérea de una carretera federal curvándose por el altiplano árido mexicano con un tractocamión en ruta"
+        width="1920" height="1097" loading="lazy" decoding="async"
+      />
+      <div class="band__veil"></div>
+    </div>
+
+    <!-- ===================== UNIDADES DE NEGOCIO ===================== -->
+    <section class="section section--dark" id="unidades">
+      <div class="container grid12">
+        <header class="section__head" data-reveal>
+          <p class="eyebrow eyebrow--light">— Unidades de negocio</p>
+          <h2 class="display display--light">Cuatro palancas operativas, un solo circuito.</h2>
+        </header>
+
+        <!-- Deliberate grid violation, applied consistently: the lead unit
+             sits beside the headline so the top-right corner carries the most
+             important card instead of empty space; the rest run 3-up below. -->
+        <article class="unit unit--lead" data-reveal>
+          <p class="unit__index">01</p>
+          <h3>Retorno / Backhaul</h3>
+          <p>500 puntos de origen conectados. Matcheo algorítmico de viajes de oportunidad que cierra circuitos cargado–cargado y reduce el deadhead.</p>
+          <ul class="unit__tags"><li>Matcheo</li><li>500 puntos</li><li>Circuitos</li></ul>
+        </article>
+
+        <div class="units">
+          <article class="unit" data-reveal data-reveal-delay="1">
+            <p class="unit__index">02</p>
+            <h3>Transporte terrestre</h3>
+            <p>Nacional y transfronterizo USMCA. Full truckload, LTL, flatbed, doble remolque, con operadores certificados y visibilidad end-to-end.</p>
+            <ul class="unit__tags"><li>FTL</li><li>LTL</li><li>USMCA</li><li>Flatbed</li></ul>
+          </article>
+
+          <article class="unit" data-reveal data-reveal-delay="2">
+            <p class="unit__index">03</p>
+            <h3>Almacenaje &amp; distribución</h3>
+            <p>WMS propio con visibilidad por SKU, picking optimizado y última milla coordinada con la red de transporte.</p>
+            <ul class="unit__tags"><li>WMS</li><li>Cross-dock</li><li>Última milla</li></ul>
+          </article>
+
+          <article class="unit" data-reveal data-reveal-delay="3">
+            <p class="unit__index">04</p>
+            <h3>Flota privada administrada</h3>
+            <p>Operamos tu flota como si fuera nuestra. Telematics, KPIs de CPM, utilización y un modelo de margen compartido.</p>
+            <ul class="unit__tags"><li>Telematics</li><li>CPM</li><li>SLA</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BANDA — cross-dock en operación ============ -->
+    <div class="band band--exit-cream" data-band>
+      <img
+        class="band__img band__img--photo"
+        src="assets/img/crossdock.webp"
+        alt="Interior de una nave de cross-dock en operación: tarimas emplayadas alineadas a ambos lados del andén y un montacargas al fondo del pasillo"
+        width="1920" height="1097" loading="lazy" decoding="async"
+      />
+      <div class="band__veil"></div>
+    </div>
+
+    <!-- ===================== SERVICIOS ===================== -->
+    <section class="section section--split section--tall" id="servicios">
+      <div class="container grid12 services-grid">
+        <aside aria-label="Red de servicios" class="services__sticky" data-reveal>
+          <p class="eyebrow">— Servicios</p>
+          <h2 class="display">Once servicios. Un solo contrato.</h2>
+          <p class="lede">Desde full truckload refrigerado hasta intermodal cross-border. Orquestamos modos y certificaciones para que tú solo firmes una tarifa.</p>
+          <a class="btn btn--primary" href="#contacto"><span>Preparar correo</span></a>
+
+          <figure class="net-panel" data-net>
+            <img
+              src="assets/img/servicios.webp"
+              alt="Diagrama de red: múltiples rutas convergiendo en un solo circuito"
+              width="900" height="1385" loading="lazy" decoding="async"
+            />
+            <figcaption>Once modos. Un solo circuito.</figcaption>
+          </figure>
+        </aside>
+
+        <ol class="services">
+          <li data-service><span class="services__num">01</span><h3>Cargas de retorno</h3><p>Matcheo de backhaul con 500 puntos de origen.</p></li>
+          <li data-service><span class="services__num">02</span><h3>Transporte terrestre nacional</h3><p>Cobertura completa México con FTL y LTL.</p></li>
+          <li data-service><span class="services__num">03</span><h3>Transporte internacional</h3><p>USMCA, cross-border, documentación y aduanas.</p></li>
+          <li data-service><span class="services__num">04</span><h3>Temperatura controlada</h3><p>Cold chain validado para farma, lácteos y perecederos.</p></li>
+          <li data-service><span class="services__num">05</span><h3>Hazmat</h3><p>Operadores y equipo certificado para materiales peligrosos.</p></li>
+          <li data-service><span class="services__num">06</span><h3>Full Truckload (FTL)</h3><p>Unidad dedicada, tiempos y temperatura garantizados.</p></li>
+          <li data-service><span class="services__num">07</span><h3>Less Than Truckload (LTL)</h3><p>Consolidación inteligente con tarifas por volumen.</p></li>
+          <li data-service><span class="services__num">08</span><h3>Flatbed &amp; sobredimensionado</h3><p>Plataformas, low-boy y permisos federales.</p></li>
+          <li data-service><span class="services__num">09</span><h3>Intermodal</h3><p>Marítimo, ferroviario y transloading.</p></li>
+          <li data-service><span class="services__num">10</span><h3>Almacenaje &amp; distribución</h3><p>WMS, picking, cross-dock y última milla.</p></li>
+          <li data-service><span class="services__num">11</span><h3>Administración de flota privada</h3><p>Operación, KPIs y optimización de CPM.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== PRESENCIA INTERNACIONAL ===================== -->
+    <section class="section section--dark section--tall" id="internacional">
+      <div class="container grid12">
+        <header class="section__head" data-reveal>
+          <p class="eyebrow eyebrow--light">— Presencia internacional</p>
+          <h2 class="display display--light">De México al mundo. Asia, Europa y América.</h2>
+          <p class="lede">Exportación e importación terrestre, marítima, aérea e intermodal. Con apoyo en gestión aduanal hasta la planta del cliente final.</p>
+        </header>
+
+        <div class="intl">
+          <div class="intl__col" data-card>
+            <p class="intl__k">Puertos clave</p>
+            <ul class="intl__list">
+              <li>Manzanillo</li>
+              <li>Veracruz</li>
+              <li>Lázaro Cárdenas</li>
+            </ul>
+          </div>
+          <div class="intl__col" data-card>
+            <p class="intl__k">Aeropuertos clave</p>
+            <ul class="intl__list">
+              <li>AIFA</li>
+              <li>AICM</li>
+              <li>Guadalajara · GDL</li>
+              <li>Monterrey · MTY</li>
+              <li>Querétaro · QRO</li>
+            </ul>
+          </div>
+          <div class="intl__col" data-card>
+            <p class="intl__k">Socios internacionales</p>
+            <ul class="intl__list">
+              <li>Asia</li>
+              <li>Europa</li>
+              <li>América</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="intl__modes" data-reveal>Terrestre · Marítima · Aérea · Intermodal — <strong>un solo contrato</strong>.</p>
+      </div>
+    </section>
+
+    <!-- ===================== INDUSTRIAS ===================== -->
+    <section class="section section--dark section--bg section--tight" id="industrias">
+      <div class="section__bg section__bg--industrias" data-section-bg aria-hidden="true">
+        <img src="assets/img/industrias.webp" alt="" width="1920" height="1097" loading="lazy" decoding="async" />
+      </div>
+
+      <div class="container grid12">
+        <header class="section__head" data-reveal>
+          <p class="eyebrow eyebrow--light">— Industrias</p>
+          <h2 class="display display--light">Dieciocho industrias atendidas.</h2>
+        </header>
+      </div>
+
+      <!-- The marquee IS the list. Duplicating it as a grid below was the same
+           content twice. -->
+      <div class="marquee" role="list" aria-label="Industrias atendidas">
+        <div class="marquee__track">
+          <span role="listitem">Consumo masivo</span><span role="listitem">Alimentos</span><span role="listitem">Bebidas</span><span role="listitem">Lácteos</span><span role="listitem">Farmacéutica</span><span role="listitem">Cuidado personal</span><span role="listitem">Limpieza</span><span role="listitem">Agricultura</span><span role="listitem">Automotriz</span><span role="listitem">Química</span><span role="listitem">Papel &amp; empaque</span><span role="listitem">Retail</span><span role="listitem">E-commerce</span><span role="listitem">Construcción</span><span role="listitem">Metales</span><span role="listitem">Energía</span><span role="listitem">Manufactura</span><span role="listitem">Cold chain</span>
+          <span aria-hidden="true">Consumo masivo</span><span aria-hidden="true">Alimentos</span><span aria-hidden="true">Bebidas</span><span aria-hidden="true">Lácteos</span><span aria-hidden="true">Farmacéutica</span><span aria-hidden="true">Cuidado personal</span><span aria-hidden="true">Limpieza</span><span aria-hidden="true">Agricultura</span><span aria-hidden="true">Automotriz</span><span aria-hidden="true">Química</span><span aria-hidden="true">Papel &amp; empaque</span><span aria-hidden="true">Retail</span><span aria-hidden="true">E-commerce</span><span aria-hidden="true">Construcción</span><span aria-hidden="true">Metales</span><span aria-hidden="true">Energía</span><span aria-hidden="true">Manufactura</span><span aria-hidden="true">Cold chain</span>
+        </div>
+      </div>
+
+      <div class="container grid12">
+        <p class="industries__note" data-reveal>Más <strong>Hazmat y químicos peligrosos</strong>, con operadores y equipo certificado.</p>
+      </div>
+    </section>
+
+    <!-- ===================== NOSOTROS + VALORES ===================== -->
+    <section class="section section--light" id="nosotros">
+      <div class="container grid12 section__grid">
+        <header class="section__head" data-reveal>
+          <p class="eyebrow">— Nosotros</p>
+          <h2 class="display">Somos la plataforma que monetiza el backhaul en México.</h2>
+        </header>
+
+        <p class="about__lede" data-reveal data-reveal-delay="1">
+          Retorno Logístico integra <strong>transportistas certificados</strong>, <strong>embarcadores enterprise</strong> y <strong>tecnología de matcheo</strong> en una sola capa operativa. Cada viaje se diseña para salir y regresar con carga.
+        </p>
+
+        <!-- Everything below the head runs the full 12 columns. Previously it
+             all lived in one right-hand column, which left the left half of
+             the section empty for ~700px. -->
+        <div class="about__mv">
+          <article class="mv" data-card>
+            <p class="mv__tag">Misión</p>
+            <p>Ofrecer a nuestros aliados comerciales opciones de retorno, circuitos completos y operaciones logísticas buscando el éxito en conjunto.</p>
+          </article>
+          <article class="mv" data-card>
+            <p class="mv__tag">Visión</p>
+            <p>Consolidarnos como la mejor plataforma de carga y transporte con reconocimiento mundial.</p>
+          </article>
+        </div>
+
+        <ol class="values" id="valores">
+          <li data-card><span>01</span><strong>Honestidad</strong> Datos reales en cada tablero. Cero costos sorpresa, cero lanes inflados.</li>
+          <li data-card><span>02</span><strong>Calidad</strong> Transportistas certificados, equipo auditado y SLAs medibles por cliente.</li>
+          <li data-card><span>03</span><strong>Puntualidad</strong> On-time in full en tiempo real, porque una ventana perdida cuesta una planta parada.</li>
+          <li data-card><span>04</span><strong>Entusiasmo</strong> Operamos como si cada carga fuera la primera.</li>
+          <li data-card><span>05</span><strong>Actitud de servicio</strong> 24/7 sin guiones. Resolvemos antes de que el cliente tenga que preguntar.</li>
+          <li data-card><span>06</span><strong>Respeto</strong> Con el operador, con el shipper, con la ruta. La red funciona cuando todos ganan.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACTO ===================== -->
+    <section class="section section--hero-contact section--bg" id="contacto">
+      <div class="section__bg section__bg--contacto" data-section-bg aria-hidden="true">
+        <img src="assets/img/contacto.webp" alt="" width="1920" height="1097" loading="lazy" decoding="async" />
+      </div>
+
+      <div class="container grid12 contact">
+        <div class="contact__copy" data-reveal>
+          <p class="eyebrow eyebrow--light">— Contacto</p>
+          <h2 class="display display--light">¿Listo para cerrar tu próximo circuito?</h2>
+          <p class="lede">Cuéntanos el lane, el volumen y la ventana. Te respondemos en menos de 24 horas con una propuesta de circuito cargado–cargado.</p>
+
+          <ul class="contact__meta">
+            <li><span class="contact__meta-k">Oficinas</span><span class="contact__address">Av. Antea 1032, oficina 302, piso 3<br/>Edificio Torre Capital · Col. Ejido Jurica<br/>Querétaro, Qro. C.P. 76100</span></li>
+            <li><span class="contact__meta-k">Email</span><a href="mailto:contacto@retornologistico.com">contacto@retornologistico.com</a></li>
+            <li><span class="contact__meta-k">Teléfono</span><a href="tel:+524422515932">+52 (442) 2 51 59 32</a></li>
+            <li><span class="contact__meta-k">Horario</span><span>24/7 monitoreo · L–V 9:00 a 18:00 CT comercial</span></li>
+            <li><span class="contact__meta-k">Redes</span><span class="contact__social"><a href="https://www.instagram.com/retorno.logistico" target="_blank" rel="noopener">Instagram</a><a href="https://www.linkedin.com/company/retorno-logistico-qro/" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.facebook.com/share/1GQQq6uCK3/" target="_blank" rel="noopener">Facebook</a></span></li>
+          </ul>
+        </div>
+
+        <form class="contact__form" data-reveal data-reveal-delay="1" method="post" action="#contacto" aria-describedby="contact-privacy" data-mail-form data-mailto="contacto@retornologistico.com">
+          <fieldset disabled class="contact__fields">
+          <legend class="sr-only">Preparar correo de contacto</legend>
+          <label>
+            <span>Nombre</span>
+            <input type="text" name="nombre" required autocomplete="name" placeholder="Tu nombre" />
+          </label>
+          <label>
+            <span>Empresa</span>
+            <input type="text" name="empresa" required autocomplete="organization" placeholder="Shipper / Carrier" />
+          </label>
+          <label>
+            <span>Email corporativo</span>
+            <input type="email" name="email" required autocomplete="email" placeholder="tu@empresa.com" />
+          </label>
+          <label>
+            <span>Lane u operación</span>
+            <textarea name="operacion" rows="4" placeholder="Origen a destino, frecuencia, tipo de carga"></textarea>
+          </label>
+          <div class="contact__privacy" id="contact-privacy">
+            <p><strong>Privacidad de tus datos.</strong> Retorno Logístico, S. de R.L. de C.V., con domicilio en Av. Antea 1032, oficina 302, piso 3, Edificio Torre Capital, Col. Ejido Jurica, Querétaro, Qro., C.P. 76100, utiliza tu nombre, empresa, correo y los datos de operación que compartas únicamente para consulta interna y atención o seguimiento de tu solicitud. No se destinan a difusión pública, venta ni publicidad.</p>
+            <p>Puedes solicitar la limitación de uso o divulgación y ejercer tus derechos sobre tus datos en <a href="mailto:contacto@retornologistico.com">contacto@retornologistico.com</a>. <a href="aviso-de-privacidad.html"><strong>Consultar el aviso de privacidad integral</strong></a>.</p>
+          </div>
+          <button type="button" data-compose class="btn btn--primary btn--lg">
+            <span>Preparar correo</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true" width="18" height="18"><path d="M5 12h12M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          </fieldset>
+          <noscript><p>Para contactarnos, utiliza el enlace de correo que aparece abajo.</p></noscript>
+          <p class="contact__form-note" data-mail-note>Abre tu aplicación de correo con un borrador. Debes enviarlo desde esa aplicación; esta página no confirma su entrega. ¿Prefieres escribir directo? <a href="mailto:contacto@retornologistico.com">contacto@retornologistico.com</a></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER — a destination ===================== -->
+  <footer class="footer">
+    <div class="container grid12">
+      <a class="footer__cta" href="#contacto" data-footer-cta>
+        <span class="footer__cta-line" aria-hidden="true">
+          <span class="footer__cta-word">Cerramos</span>
+          <span class="footer__cta-word">el</span>
+          <span class="footer__cta-word">círculo.</span>
+        </span>
+        <span class="sr-only">Cerramos el círculo. Ver mi propuesta de retorno.</span>
+        <span class="footer__cta-sub">Ver mi propuesta de retorno
+          <svg viewBox="0 0 24 24" aria-hidden="true" width="20" height="20"><path d="M5 12h12M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+      </a>
+    </div>
+
+    <div class="container grid12 footer__grid">
+      <div class="footer__brand">
+        <a class="nav__logo" href="#top" aria-label="Retorno Logístico — inicio">
+          <svg class="nav__lockup" viewBox="0 0 460.21 128" aria-hidden="true" focusable="false"><use href="#rl-lockup"/></svg>
+        </a>
+        <p>Retorno Logístico, S. de R.L. de C.V.<br/>Av. Antea 1032, oficina 302, piso 3<br/>Edificio Torre Capital · Col. Ejido Jurica<br/>Querétaro, Qro. C.P. 76100, México.</p>
+        <p class="footer__clock"><span data-local-time>—</span> hora local</p>
+        <ul class="social" aria-label="Retorno Logistico en redes sociales">
+          <li><a href="https://www.instagram.com/retorno.logistico" target="_blank" rel="noopener" aria-label="Instagram de Retorno Logistico"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2c2.72 0 3.06.01 4.12.06 1.07.05 1.8.22 2.43.46.66.26 1.22.6 1.77 1.16.56.55.9 1.11 1.16 1.77.24.63.41 1.36.46 2.43.05 1.06.06 1.4.06 4.12s-.01 3.06-.06 4.12c-.05 1.07-.22 1.8-.46 2.43-.26.66-.6 1.22-1.16 1.77-.55.56-1.11.9-1.77 1.16-.63.24-1.36.41-2.43.46-1.06.05-1.4.06-4.12.06s-3.06-.01-4.12-.06c-1.07-.05-1.8-.22-2.43-.46a4.9 4.9 0 0 1-1.77-1.16 4.9 4.9 0 0 1-1.16-1.77c-.24-.63-.41-1.36-.46-2.43C2.01 15.06 2 14.72 2 12s.01-3.06.06-4.12c.05-1.07.22-1.8.46-2.43.26-.66.6-1.22 1.16-1.77.55-.56 1.11-.9 1.77-1.16.63-.24 1.36-.41 2.43-.46C8.94 2.01 9.28 2 12 2Zm0 1.8c-2.67 0-2.99.01-4.04.06-.98.04-1.5.2-1.86.34-.47.18-.8.4-1.15.75-.35.35-.57.68-.75 1.15-.14.36-.3.88-.34 1.86-.05 1.05-.06 1.37-.06 4.04s.01 2.99.06 4.04c.04.98.2 1.5.34 1.86.18.47.4.8.75 1.15.35.35.68.57 1.15.75.36.14.88.3 1.86.34 1.05.05 1.37.06 4.04.06s2.99-.01 4.04-.06c.98-.04 1.5-.2 1.86-.34.47-.18.8-.4 1.15-.75.35-.35.57-.68.75-1.15.14-.36.3-.88.34-1.86.05-1.05.06-1.37.06-4.04s-.01-2.99-.06-4.04c-.04-.98-.2-1.5-.34-1.86a3.1 3.1 0 0 0-.75-1.15 3.1 3.1 0 0 0-1.15-.75c-.36-.14-.88-.3-1.86-.34-1.05-.05-1.37-.06-4.04-.06Zm0 3.07a5.13 5.13 0 1 1 0 10.26 5.13 5.13 0 0 1 0-10.26Zm0 1.8a3.33 3.33 0 1 0 0 6.66 3.33 3.33 0 0 0 0-6.66Zm5.34-3.2a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4Z"/></svg></a></li>
+          <li><a href="https://www.linkedin.com/company/retorno-logistico-qro/" target="_blank" rel="noopener" aria-label="LinkedIn de Retorno Logistico"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14Zm1.78 13.02H3.55V9h3.57v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0Z"/></svg></a></li>
+          <li><a href="https://www.facebook.com/share/1GQQq6uCK3/" target="_blank" rel="noopener" aria-label="Facebook de Retorno Logistico"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.19 2.24.19v2.47h-1.26c-1.24 0-1.63.78-1.63 1.57v1.88h2.78l-.45 2.91h-2.33V22c4.78-.76 8.44-4.92 8.44-9.94Z"/></svg></a></li>
+        </ul>
+      </div>
+
+      <nav class="footer__col" aria-label="Plataforma">
+        <h3>Plataforma</h3>
+        <a href="#circuito">Circuito</a>
+        <a href="#transportistas">Transportistas</a>
+        <a href="#unidades">Unidades</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#internacional">Internacional</a>
+        <a href="#industrias">Industrias</a>
+      </nav>
+
+      <nav class="footer__col" aria-label="Compañía">
+        <a href="aviso-de-privacidad.html">Aviso de privacidad</a>
+        <h3>Compañía</h3>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#valores">Valores</a>
+        <a href="#clientes">Clientes</a>
+      </nav>
+
+      <div class="footer__col">
+        <h3>Contacto</h3>
+        <a href="mailto:contacto@retornologistico.com">contacto@retornologistico.com</a>
+        <a href="tel:+524422515932">+52 (442) 2 51 59 32</a>
+        <a href="#contacto">Ver mi propuesta de retorno</a>
+      </div>
+    </div>
+
+    <div class="container grid12 footer__bottom">
+      <span>© <span id="year">2026</span> Retorno Logístico. Todos los derechos reservados.</span>
+      <span class="firma">
+         Cerramos el círculo. Cargado–Cargado.
+             <small>— Piña ✦</small>
+      </span>
+    </div>
+  </footer>
+
+  <!-- Vendored: no build step, works from file://. -->
+  <script src="assets/vendor/gsap.min.js" defer></script>
+  <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
+  <script src="assets/vendor/lenis.min.js" defer></script>
+  <script src="scripts/main.js" defer></script>
+  <script src="scripts/scroll-motion.js" defer></script>
+</body>
+</html>
