@@ -1,0 +1,6 @@
+docs/
+.claude/
+.git/
+node_modules/
+dist/
+CLAUDE.md

@@ -1,0 +1,36 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*~
+
+# Node (future-proofing)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Claude Code — the shared config (hooks, commands, settings.json, launch.json)
+# is tracked so the context system survives a clone; only machine-local
+# permission overrides stay out.
+.claude/settings.local.json
+# Hook debug dump — session ids and absolute local paths, regenerated each run
+.claude/hooks/.last-payload.json
+
+# Duplicate source asset (lives in assets/hero-video.mp4)
+/Genera_un_video_*.mp4
+
+# Secrets — never commit
+.env
+.env.*
+!.env.example
+
+# Vercel project link (project/org ids, generated)
+.vercel
+
+.env*.local

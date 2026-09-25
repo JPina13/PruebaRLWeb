@@ -1,0 +1,14 @@
+[
+  {
+    "file": "gsap.min.js",
+    "sha256": "dd7dc87e023b3480f9707296342565ca2e361c8393cabb30f9557e06eb1bed4d"
+  },
+  {
+    "file": "lenis.min.js",
+    "sha256": "9ae542cc216b79ec9d36c4a51490914c8b90899a29b5f2aaf3e4222b7098bd41"
+  },
+  {
+    "file": "ScrollTrigger.min.js",
+    "sha256": "ba6ffe7b85ddcc7b891b91a430f88640dff41017874bceedf071ca156ccccefa"
+  }
+]

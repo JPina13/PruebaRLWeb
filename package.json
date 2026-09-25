@@ -1,0 +1,1 @@
+{"name":"retorno-landing","version":"1.1.0","private":true,"scripts":{"build":"node scripts/build.mjs","check":"node --check scripts/main.js && node --check scripts/scroll-motion.js && node --check scripts/build.mjs"},"engines":{"node":">=20"}}
